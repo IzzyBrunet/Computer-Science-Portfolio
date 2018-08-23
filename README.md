@@ -1,2 +1,2 @@
 # hello-web
-Test text.
+Placeholder text for now.
