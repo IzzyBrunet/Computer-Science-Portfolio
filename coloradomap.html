@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+		crossorigin=""/>
+
+		<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+			integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+			crossorigin=""></script>
+	</head>
+
+	<body>
+		<div id="comap" style="height: 580px; width: 75%; margin: 35px; border-radius: 13px;"></div>
+
+		<script>
+			var map = L.map('comap').setView([38.975789, -105.6647], 7);
+
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				maxZoom: 19,
+				minZoom: 7,
+				attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+			}).addTo(map);
+			var colorado = L.polygon([
+			[41.000635, -109.050043],
+			[41.002343, -102.051932],
+			[36.992952, -102.041926],
+			[36.999032, -109.045202]
+		]).addTo(map);
+
+		var mntns = L.polygon([
+		[42.620579, -106.963861],
+		[40.361791, -107.591803],
+		[39.340417, -108.018313],
+		[38.018679, -108.072623],
+		[35.951698, -107.849380],
+		[36.076744, -104.986315],
+		[38.336096, -105.427240],
+		[39.633190, -105.322083],
+		[41.966584, -104.957938]
+		]).addTo(map);
+		mntns.bindPopup("<center><b>Rocky Mountains</b></center>")
+
+		var denver = L.marker([39.758293, -104.979332]).addTo(map);
+		denver.bindPopup("<center><b>Denver</b></center>")
+		var cosprngs = L.marker([38.8691, -104.757]).addTo(map);
+		cosprngs.bindPopup("<center><b>Colorado Springs</b></center>")
+		var rra = L.marker([39.665704, -105.20461]).addTo(map);
+		rra.bindPopup("<center><b>Red Rock Ampitheatre</b></center>")
+		var mntevans = L.marker([39.587616, -105.643996]).addTo(map);
+		mntevans.bindPopup("<center><b>Mount Evans</b></center>")
+		var pikespeak = L.marker([38.840734, -105.042174]).addTo(map);
+		pikespeak.bindPopup("<center><b>Pikes Peak</b></center>")
+		var grdn = L.marker([38.878361, -104.869766]).addTo(map);
+		grdn.bindPopup("<center><b>Garden of the Gods</b></center>")
+		</script>
+	</body>
+</html>
