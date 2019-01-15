@@ -1,0 +1,67 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 width="1031.811px" height="728.5px" viewBox="0 0 1031.811 728.5" enable-background="new 0 0 1031.811 728.5"
+			 xml:space="preserve">
+
+		<image onclick="changeinfo(0,1)" overflow="visible" width="321" height="322" xlink:href="sassafras.png"  transform="matrix(0.3675 0 0 0.3675 31.0371 107.9971)">
+		</image>
+
+		<image onclick="changeinfo(2,3)" overflow="visible" width="239" height="360" xlink:href="birch.png"  transform="matrix(0.3287 0 0 0.3287 155.998 107.998)">
+		</image>
+
+		<image onclick="changeinfo(4,5)" overflow="visible" width="313" height="360" xlink:href="tulip_tree.png"  transform="matrix(0.3546 0 0 0.3546 249.0015 103.001)">
+		</image>
+
+		<image onclick="changeinfo(6,7)" overflow="visible" width="368" height="360" xlink:href="ginkgo.png"  transform="matrix(0.269 0 0 0.269 367.998 119.9985)">
+		</image>
+
+		<image onclick="changeinfo(8,9)" overflow="visible" width="223" height="360" xlink:href="dogwood.png"  transform="matrix(0.2915 0 0 0.2915 484.998 114.9985)">
+		</image>
+
+		<image onclick="changeinfo(10,11)" overflow="visible" width="287" height="360" xlink:href="cottonwood.png"  transform="matrix(0.3204 0 0 0.3204 576 111)">
+		</image>
+
+		<image onclick="changeinfo(12,13)" overflow="visible" width="308" height="360" xlink:href="maple.png"  transform="matrix(0.4125 0 0 0.4125 680.9434 94.6699)">
+		</image>
+
+		<image onclick="changeinfo(14,15)" overflow="visible" width="321" height="322" xlink:href="elm.png"  transform="matrix(0.266 0 0 0.266 807.3271 126.7759)">
+		</image>
+
+		<image onclick="changeinfo(16,17)" overflow="visible" width="235" height="360" xlink:href="white_oak.png" transform="matrix(0.3915 0 0 0.3915 902.998 97.666)">
+		</image>
+
+		<g>
+			<rect x="31.04" y="89" fill="#A3C049" width="959.96" height="8.668"/>
+			<text transform="matrix(1 0 0 1 31.04 57.332)" fill="#2C714C" font-family="'MyriadPro-Bold'" font-size="32.3761">T R E E</text>
+			<text transform="matrix(1 0 0 1 31.04 77.332)" fill="#2C714C" font-family="'MyriadPro-Regular'" font-size="21">WHICH OF THESE LEAVES LOOKS CLOSEST TO THOSE ON THE TREE?</text>
+			<text transform="matrix(1 0 0 1 498.04 57.332)" fill="#2C714C" font-family="'MyriadPro-Bold'" font-size="32.3761">G U I D E</text>
+			<text transform="matrix(1 0 0 1 148.998 57.332)" fill="#2C714C" font-family="'MyriadPro-Bold'" font-size="32.3761">I D E N T I F I C A T I O N</text>
+		</g>
+
+		<text id="treename" transform="matrix(1 0 0 1 31.04 290.332)" fill="#2C714C" font-family="'MyriadPro-Bold'" font-size="26">TREE NAME</text>
+		<text id="treeinfo" transform="matrix(1 0 0 1 31.04 310.332)" fill="#2C714C" font-family="'MyriadPro-Regular'" font-size="18">TREE INFO</text>
+
+		</svg>
+
+		<script>
+			var definitions = [
+					"SASSAFRAS", "information",
+					"BIRCH", "information",
+					"TULIP TREE", "information",
+					"GINKGO", "information",
+					"DOGWOOD", "information",
+					"COTTONWOOD", "information",
+					"MAPLE", "information",
+					"ELM", "information",
+					"WHITE OAK", "information"
+			];
+			function changeinfo(name, info) {
+				 document.getElementById("treename").innerHTML = definitions[name];
+				 document.getElementById("treeinfo").innerHTML = definitions[info];
+			}
+		</script>
+	</body>
+</html>
