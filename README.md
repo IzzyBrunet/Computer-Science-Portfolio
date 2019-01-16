@@ -8,3 +8,4 @@
 * [Multiplication Calculator](https://izzybrunet.github.io/hello-web/multiplicationcalc.html) allows the user to easily multiply numbers
 * [Tree Identification Program](https://izzybrunet.github.io/hello-web/treeid.html) allows the user to identify trees based on the properties of the leaves
 * [Leaflet Colorado Map](https://izzybrunet.github.io/hello-web/coloradomap.html) allows the user to see various destinations in Colorado
+* [GPA Calculator](https://izzybrunet.github.io/hello-web/GPA.html) allows an IB student to calculate their GPA on a 4.0 scale
