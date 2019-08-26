@@ -2,7 +2,7 @@
   <head>
   </head>
   <body>
-    <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+    <svg width="580" height="340" xmlns="http://www.w3.org/2000/svg">
  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
 
     <title>Layer 1</title>
@@ -16,31 +16,51 @@
 
     <g>
       <rect onclick="circumference()" stroke="#1d8e69" id="circumference" height="18" width="40.999999" y="209.266519" x="291.5" stroke-width="1.5" fill="#50cea6"/>
-      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" id="c_text" y="222.266521" x="299.5" stroke-width="0" stroke="#1d8e69" fill="#0d7251">FIND</text>
+      <text onclick="circumference()" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" id="c_text" y="222.266521" x="299.5" stroke-width="0" stroke="#1d8e69" fill="#0d7251">FIND</text>
     </g>
     <g>
       <rect onclick="area()" stroke="#1d8e69" id="area" height="18" width="40.999999" y="269.299299" x="291.5" stroke-width="1.5" fill="#50cea6"/>
-      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" id="a_text" y="282.2993" x="299.5" stroke-width="0" stroke="#1d8e69" fill="#0d7251">FIND</text>
+      <text onclick="area()" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" id="a_text" y="282.2993" x="299.5" stroke-width="0" stroke="#1d8e69" fill="#0d7251">FIND</text>
+    </g>
+
+    <g>
+      <rect onclick="done()" stroke="#1d8e69" id="circumference" height="18" width="40.999999" y="321" x="200" stroke-width="1.5" fill="#50cea6"/>
+      <text onclick="done()" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" id="c_text" y="334" x="204" stroke-width="0" stroke="#1d8e69" fill="#0d7251">DONE</text>
     </g>
       
     <line stroke="#0d7251" stroke-dasharray="5,5" stroke-linecap="null" stroke-linejoin="null" id="svg_20" y2="200.04375" x2="277.953228" y1="200.04375" x1="61.5" fill-opacity="null" stroke-width="1.5" fill="none"/>
     <ellipse stroke="#0d7251" ry="4" rx="4" id="svg_21" cy="200.043753" cx="170.5" stroke-width="1.5" fill="#0d7251"/>
     
-    <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" id="question" y="500" x="100" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#0d7251">???</text>
+    <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" id="question" y="340" x="1" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#0d7251"></text>
     </svg>
     <br>
 
-    <p>a</p>
     <textarea id="input"></textarea>
 
     <script>
+      var problem;
+      var answer;
+      var x;
       function circumference(){
-        
-      }
+        document.getElementById("question").innerHTML = "What is the circle's diameter?";
+        var problem = circumference;
+      };
       function area(){
-        
+        document.getElementById("question").innerHTML = "What is the circle's radius?";
+        var problem = area;
+      };
+      function done(){
+        var x = document.getElementById("input").value;
+        if (problem == circumference){
+          var x = Num(x)
+          var answer = x * 3.14;
+          var answer2 = String(answer);
+          document.getElementById("circumference_answer").innerHTML = answer2;
+        };
+        if (problem == area) {
+
+        };
       }
-      var x = documet.getElementById("input").value;
       
     </script>
   </body>
