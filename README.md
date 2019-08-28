@@ -10,4 +10,4 @@
 * [Leaflet Colorado Map](https://izzybrunet.github.io/hello-web/coloradomap.html) allows the user to see various destination in Colorado
 * [GPA Calculator](https://izzybrunet.github.io/hello-web/GPA.html) allows an IB student to calculate their GPA ona a 4.0 scale
 
-* [Circle Dimention Calculator](https://izzybrunet.github.io/hello-web/chemistry.html) allows the user to calculate the circumference or area of a circle with the length of the radius
+* [Circle Dimension Calculator](https://izzybrunet.github.io/hello-web/chemistry.html) allows the user to calculate the circumference or area of a circle with the length of the radius
