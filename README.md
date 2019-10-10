@@ -9,5 +9,6 @@
 * [Tree Identification Program](https://izzybrunet.github.io/Computer-Science-Portfolio/treeid.html) allows the user to identify trees based on the properties of the leaves
 * [Leaflet Colorado Map](https://izzybrunet.github.io/Computer-Science-Portfolio/coloradomap.html) allows the user to see various destination in Colorado
 * [GPA Calculator](https://izzybrunet.github.io/Computer-Science-Portfolio/GPA.html) allows an IB student to calculate their GPA ona a 4.0 scale
+* [Maze Game](https://izzybrunet.github.io/Computer-Science-Portfolio/maze.html)
 
 * [Circle Dimension Calculator](https://izzybrunet.github.io/Computer-Science-Portfolio/chemistry.html) allows the user to calculate the circumference or area of a circle with the length of the radius
