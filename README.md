@@ -14,4 +14,4 @@
 
 * [Circle Dimension Calculator](https://izzybrunet.github.io/Computer-Science-Portfolio/chemistry.html) allows the user to calculate the circumference or area of a circle with the length of the radius
 
-* [Internal Assessment: Geological Sample Logger](https://maplog.leftrightstudio.net)
+* [Internal Assessment Product: Geological Sample Logger](https://maplog.leftrightstudio.net) allows the user to plot the location of samples on a map and record their details on a table using a database
