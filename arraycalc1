@@ -1,0 +1,42 @@
+<html>
+<head>
+	<script>
+    var array = [];
+    var count = array.length;
+    var ask;
+    var filler;
+    amount = prompt("How many numbers would you like to enter?")
+    while  (count < amount) {
+      ask = prompt("Please enter your next data entry (in order from least to greatest).");
+      array.push(ask);
+      count = array.length;
+    }
+    alert(array);
+    choice = prompt("What would you like to calculate (a, b, or c)? a. median, b. minimum, or c. maximum")
+
+    if (choice == "a"){
+      filler = "median";
+      if (array.length%2 == 0){
+        answer = (parseInt(array[array.length/2]) + parseInt(array[(array.length/2) - 1])) / 2;
+      }
+      else{
+        var y = (array.length + 1) / 2;
+        answer = array[y - 1];
+      }
+    }
+    else if (choice == "b"){
+      filler = "minimum";
+      answer = array[0];
+    }
+    else if (choice == "c"){
+      filler = "maximum";
+      answer = array[array.length - 1];
+    }
+    else {
+      alert("That option isn't available. Please try again.");
+    }
+    alert("The " + filler + " is " + answer);
+	</script>
+</head>
+
+</html>
