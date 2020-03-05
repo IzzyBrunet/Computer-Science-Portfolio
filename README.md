@@ -15,4 +15,6 @@
 * [Circle Dimension Calculator](https://izzybrunet.github.io/Computer-Science-Portfolio/chemistry.html) allows the user to calculate the circumference or area of a circle with the length of the radius
 
 ##### Update:
+* [Array Calculation Calculator (cannot sort)]() a program that can perform a few calculations (minimum, maximum, median) on a sorted array inputted by the user
+* [Array Calculation Calculator (can sort)]() same as above, the user can just input any unsorted values
 * [Internal Assessment Product: Geological Sample Logger](https://maplog.leftrightstudio.net) allows the user to plot the location of samples on a map and record their details on a table using a database
