@@ -20,4 +20,4 @@
 * [Geological Sample Analysis Program using 2D arrays](https://izzybrunet.github.io/Computer-Science-Portfolio/3darray.html)
 * [Sign In Thing Using Linear Search](https://izzybrunet.github.io/Computer-Science-Portfolio/signin.html) create an account and sign in, that's all there is to it
 * [Quick Sort](https://izzybrunet.github.io/Computer-Science-Portfolio/quicksort.html) sort an array using quick sort
-* [Internal Assessment Product: Geological Sample Logger](https://maplog.leftrightstudio.net) allows the user to plot the location of samples on a map and record their details on a table using a database
+* [Internal Assessment Process Program](https://izzybrunet.github.io/Computer-Science-Portfolio/ia.html) allows the user to plot the location of samples on a map and record their details on a table (and sort by expedition) - this isn't final product (I have since used a database to record the samples)
