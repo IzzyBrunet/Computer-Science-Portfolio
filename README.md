@@ -17,5 +17,6 @@
 ##### Update:
 * [Array Calculation Calculator (cannot sort)](https://izzybrunet.github.io/Computer-Science-Portfolio/arraycalc1.html) a program that can perform a few calculations (minimum, maximum, median) on a sorted array inputted by the user
 * [Array Calculation Calculator (can sort)]() same as above, the user can just input any unsorted values
-* [Geological Sample Analysis Program](https://izzybrunet.github.io/Computer-Science-Portfolio/3darray.html)
+* [Geological Sample Analysis Program using 2D arrays](https://izzybrunet.github.io/Computer-Science-Portfolio/3darray.html)
+* [Sign In Thing Using Linear Search](https://izzybrunet.github.io/Computer-Science-Portfolio/signin.html) create an account and sign in, that's all there is to it
 * [Internal Assessment Product: Geological Sample Logger](https://maplog.leftrightstudio.net) allows the user to plot the location of samples on a map and record their details on a table using a database
