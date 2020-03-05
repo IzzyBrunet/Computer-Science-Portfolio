@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <p id="unsorted"></p>
+    <button onclick="quicksort()">sort</button>
+    <p id="sorted"></p>
+  </head>
+  <body>
+    <script>
+      array = [93,95,85,41,75,68,100,50,73,80,12,2,96,5,64,77,92,33,57,52,52,78,93,40,85];
+      document.getElementById("unsorted").innerHTML = array;
+      var array2 = [];
+      var a = 0;
+      var b = 0;
+      var c;
+      var sorted = document.getElementById("sorted").innerHTML;
+
+      function quicksort(){
+        var hola = Math.floor(Math.random() * array.length);
+        console.log(hola);
+        console.log(array[hola]);
+        array2.push(array[hola]);
+        document.getElementById("sorted").innerHTML = "<b>Splitting + rearranging values:</b>";
+          for(i=0; i<array.length; i++){
+            if(array[i]<array[hola]){
+              array2.unshift(array[i]);
+              console.log(array2);
+              document.getElementById("sorted").innerHTML = document.getElementById("sorted").innerHTML + "</p><br><p>" + array2;
+              a++;
+              console.log("a" + a);
+            }
+            else if(array[i]>array[hola]){
+              array2.push(array[i]);
+              console.log(array2);
+              document.getElementById("sorted").innerHTML = document.getElementById("sorted").innerHTML + "</p><br><p>" + array2;
+              b++;
+              console.log("b" + b);
+            }
+            else if (i !== hola && array[i] == array[hola]){
+              array2.push(array[i]);
+              console.log(array2);
+              document.getElementById("sorted").innerHTML = document.getElementById("sorted").innerHTML + "</p><br><p>" + array2;
+              b++;
+              console.log("b" + b);
+            }
+          }
+          document.getElementById("sorted").innerHTML = document.getElementById("sorted").innerHTML + "</p><br><p>" + "<b>Ordering the two sections (using bubble sort):</b>"
+          for(x=0; x<a; x++){
+            for(i=0; i<a; i++){
+              if(array2[i]>array2[i+1]){
+                c = array2[i+1];
+                array2[i+1] = array2[i];
+                array2[i] = c;
+                console.log("status1 " + array2)
+                document.getElementById("sorted").innerHTML = document.getElementById("sorted").innerHTML + "</p><br><p>" + array2;
+              }
+              else{}
+            }
+          }
+          for(x=0; x<b+1; x++){
+            d = a + 1;
+            for(i=0; i<b+1; i++){
+              if(array2[i+d]>array2[i+d+1]){
+                  c = array2[i+d+1];
+                  array2[i+d+1] = array2[i+d];
+                  array2[i+d] = c;
+                  console.log("status2 " + array2)
+                  document.getElementById("sorted").innerHTML = document.getElementById("sorted").innerHTML + "</p><br><p>" + array2;
+              }
+              else{}
+            }
+          }
+      }
+      
+    </script>
+  </body>
+</html>
