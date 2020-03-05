@@ -14,5 +14,4 @@
 
 * [Circle Dimension Calculator](https://izzybrunet.github.io/Computer-Science-Portfolio/chemistry.html) allows the user to calculate the circumference or area of a circle with the length of the radius
 
-* [Geolocation Test](https://izzybrunet.github.io/Computer-Science-Portfolio/geolocationtest.html)
 * [Internal Assessment: Geological Sample Logger](https://maplog.leftrightstudio.net)
