@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 3px;
+      }
+    </style>
+  </head>
+<body>
+	<p>Click the button to log a new sample.</p>
+  <select id="whichexp">
+    <option value="new">Create New Expedition</option>
+  </select>
+	<button onclick="getLocation()">Log New Sample</button>
+  
+  <p id="demo"></p>
+
+    <div id="geomap" style="height: 400px; width: 90%; margin: 35px; border-radius: 13px;"></div>
+    <select id="filterexp">
+      <option value="all">all</option>
+    </select>
+    <button onclick="filter()">Filter</button><p>(if you click "all," it'll reload the page, which will clear the table :/ but otherwise that works with the database)</p>
+    <table id="table" style="width:100%">
+      <tr>
+        <th>Name</th>
+        <th>Expedition</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+      </tr>
+    </table>
+    <script>
+      // https://leafletjs.com/download.html - look for topographic
+      // https://www.w3schools.com/html/html5_geolocation.asp
+      var map = L.map('geomap').setView([38.975789, -97], 4);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				maxZoom: 19,
+				minZoom: 1,
+				attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+			}).addTo(map);
+      var exps = [];
+      var name;
+      var lat;
+      var long;
+      var exp;
+      var selected;
+      var filterby;
+      var tr;
+      var count = 0;
+      function getLocation() {
+        selected = document.getElementById("whichexp").options[document.getElementById("whichexp").selectedIndex].value;
+        if (selected == "new"){
+          exp = prompt("What is the name of your new expedition?");
+          exps.push(exp);
+          document.getElementById("filterexp").innerHTML = document.getElementById("filterexp").innerHTML + "<option value='" + exp + "'>" + exp + 
+          "</option>";
+          document.getElementById("whichexp").innerHTML = document.getElementById("whichexp").innerHTML + "<option value='" + exp + "'>" + exp + 
+          "</option>";  
+        }
+        else{
+          if (navigator.geolocation) {
+            name = prompt("Name:");
+            navigator.geolocation.getCurrentPosition(showPosition);
+            count += 1;
+          }
+          else { 
+            document.getElementById("demo").innerHTML = "Geolocation is not supported by this browser.";
+          }   
+        }    
+      }
+
+      function showPosition(position) {
+        lat = position.coords.latitude;
+        long = position.coords.longitude
+        document.getElementById("demo").innerHTML = "Latitude: " + lat + "<br>Longitude: " + long;
+
+        L.marker([lat, long]).addTo(map).bindPopup("<center><b> Sample " + name + "</br></center>");
+
+        //var table = document.getElementById("table");
+        //var row = table.insertRow();
+        //var namecell = row.insertCell(0);
+        //var latcell = row.insertCell(1);
+        //var longcell = row.insertCell(2);
+        //namecell.innerHTML = name;
+        //latcell.innerHTML = lat;
+        //longcell.innerHTML = long;
+
+        //document.getElementById("table").insertRow(0).insertCell(0).insertCell(1).insertCell(2);
+
+        document.getElementById("table").innerHTML = document.getElementById("table").innerHTML + "<tr value='" + selected + "'><td>" + name + "</td><td>" + selected + "</td><td>" + lat + "</td><td>" + long + "</td></tr>";
+
+      }
+      //https://www.w3schools.com/howto/howto_js_filter_table.asp
+      function filter(){
+        filterby = document.getElementById("filterexp").options[document.getElementById("filterexp").selectedIndex].value;
+        if (filterby == "all"){
+          location.reload();
+        }
+        else{
+          tr = table.getElementsByTagName("tr");
+          for (i=1; i<tr.length; i++){
+            td = tr[i].getElementsByTagName("td")[1];
+            if (filterby == td.textContent){
+              tr[i].style.display = "";
+            }
+            else {
+              tr[i].style.display = "none";
+            }
+            
+          }
+        }
+      }
+      
+    </script>
+
+  </body>
+</html>
