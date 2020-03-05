@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <p>This is an edited version of one of my previous programs.</p>
+  </head>
+  <body>
+    <script>
+      var array = [];
+      var count = array.length;
+      var ask;
+      var filler;
+      var num;
+      amount = prompt("How many numbers would you like to enter?")
+      while  (count < amount) {
+        ask = prompt("Please enter your next data entry.");
+        array.push(ask);
+        count = array.length;
+      }
+      alert(array);
+      choice = prompt("What would you like to calculate (a, b, or c)? a. minimum, b. maximum, or c. average")
+
+      if (choice == "a"){
+        filler = "minimum";
+        for(i=0; i<array.length; i++){
+          if (i == 0){
+            num = array[i];
+          }
+          else if(parseInt(array[i]) < num){
+            num = array[i];
+          }
+          else {
+            num = num;
+          }        
+        }
+        answer = num;
+      }
+      else if (choice == "b"){
+        filler = "maximum";
+        for(i=0; i<array.length; i++){
+          if (i == 0){
+            num = array[i];
+          }
+          else if(parseInt(array[i]) > num){
+            num = array[i];
+          }
+          else {
+            num = num;
+          }        
+        }
+        answer = num;
+      }
+      else if (choice == "c"){
+        filler = "average";
+        var arrayTotal = array.reduce(function(a, b){
+          return parseInt(a) + parseInt(b);
+        });
+        answer = arrayTotal / array.length;
+      }
+      else {
+        alert("That option isn't available. Please try again.");
+      }
+      alert("The " + filler + " is " + answer);
+    </script>
+  </body>
+</html>
