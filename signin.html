@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <button onclick="newUser()">New User</button>
+    <button onclick="login()">Log In</button>
+    <h2 id="welcome"></h2>
+  </head>
+  <body>
+    <script>
+      var newName;
+      var newPassword;
+      var array = [];
+      var i;
+      var input;
+      var name;
+
+      function newUser(){
+        newName = prompt("Please create a new name.");
+        newPassword = prompt("Please create a new password.");
+        array.splice(array.length, 0, [newName, newPassword]);
+      }
+
+      function login(){
+        input = prompt("Please enter your username.");
+        for(i=0; i<array.length; i++){
+          if(input == array[i][0]){
+            password = prompt("Please enter your password.");
+            if (password == array[i][1]){
+              document.getElementById("welcome").innerHTML = "Welcome, " + array[i][0] + "!";
+            }
+            else{
+              document.getElementById("welcome").innerHTML = ":( Sorry, " + array[i][0] + ". Please try again.";
+            }
+          }
+          else{
+            document.getElementById("welcome").innerHTML = "We don't seem to have that name in the system. Please try again or create an account (new user).";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
