@@ -19,5 +19,5 @@
 * [Array Calculation Calculator (can sort)](https://izzybrunet.github.io/Computer-Science-Portfolio/arraycalc2.html) same as above, the user can just input any unsorted values
 * [Geological Sample Analysis Program using 2D arrays](https://izzybrunet.github.io/Computer-Science-Portfolio/3darray.html)
 * [Sign In Thing Using Linear Search](https://izzybrunet.github.io/Computer-Science-Portfolio/signin.html) create an account and sign in, that's all there is to it
-* [Quick Sort](https://izzybrunet.github.io/Computer-Science-Portfolio/signin.html) sort an array using quick sort
+* [Quick Sort](https://izzybrunet.github.io/Computer-Science-Portfolio/quicksort.html) sort an array using quick sort
 * [Internal Assessment Product: Geological Sample Logger](https://maplog.leftrightstudio.net) allows the user to plot the location of samples on a map and record their details on a table using a database
