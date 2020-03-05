@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <p>Each location below is a geological expedition with respective samples collected. Press "view" to display samples for a specific day or "find median" to find the median of samples for a specific day.</p>
+    <h3>Montana</h3>
+    <p id=1></p>
+    <p id=11></p>
+    <button onclick="retrieve(1)">View</button>
+    <button onclick="median(1)">Find Median</button>
+    <br>
+    <h3>Atlantic</h3>
+    <p id=2></p>
+    <p id=12></p>
+    <button onclick="retrieve(2)">View</button>
+    <button onclick="median(2)">Find Median</button>
+    <br>
+    <h3>Antarctica</h3>
+    <p id=3></p>
+    <p id=13></p>
+    <button onclick="retrieve(3)">View</button>
+    <button onclick="median(3)">Find Median</button>
+  </head>
+  <body>
+    <script>
+      var data = [
+        [[12, 13, 18, 19], [22, 22, 23, 24, 28]],
+        [[32, 32, 34, 37], [45, 46, 46, 48, 48, 49]],
+        [[50, 51, 51, 52, 54, 57], [61, 64, 68]]
+      ];
+      var sample;
+      var day;
+      var answer;
+
+      function median(x){
+          day = prompt("Which day would you like to find the median of?")
+          if (data[x-1][day-1].length%2 == 0){
+            answer = (parseInt(data[x-1][day-1][data[x-1][day-1].length/2]) + parseInt(data[x-1][day-1][(data[x-1][day-1].length/2) - 1])) / 2;
+          }
+          else{
+            var y = (data[x-1][day-1].length + 1) / 2;
+            answer = data[x-1][day-1][y - 1];
+          }
+          document.getElementById(x+10).innerHTML = "Median: " + answer;
+      }
+      function retrieve(x){
+            day = prompt("Which day would you like to see (1 or 2)?")
+            document.getElementById(x).innerHTML = data[x-1][day-1];
+      }
+    </script>
+  </body>
+</html>
